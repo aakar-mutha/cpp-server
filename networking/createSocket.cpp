@@ -1,11 +1,11 @@
 /*
 Created By : Aakar Mutha 
 Date: 05/21/2024
-File: socketConnection.cpp
+File: createSocket.cpp
 */
-#include "socketConnection.hpp"
+#include "createSocket.hpp"
 
-cppServer::socketConnection::socketConnection(int domain, int service, int protocol, int port, u_long interface){
+cppServer::createSocket::createSocket(int domain, int service, int protocol, int port, u_long interface){
     /*
     DOMAIN: AF_INET (IP), AF_INET6 (IPv6), AF_UNIX (local channel, similar to pipes), AF_ISO (ISO protocols), and AF_NS (Xerox Network Systems protocols)
     SERVICE: SOCK_STREAM (virtual circuit service), SOCK_DGRAM (datagram service), SOCK_RAW (direct IP service)
@@ -28,7 +28,7 @@ cppServer::socketConnection::socketConnection(int domain, int service, int proto
 }
 
 /* Test if the connection was successful. */
-void cppServer::socketConnection::testConnection(int testFD) {
+void cppServer::createSocket::testConnection(int testFD) {
     if( testFD < 0){
         perror("Connection Failed.....");
         exit(EXIT_FAILURE);
@@ -36,18 +36,18 @@ void cppServer::socketConnection::testConnection(int testFD) {
 }
 
 /* Getter Functions */
-int cppServer::socketConnection::getSock(){
+int cppServer::createSocket::getSock(){
     return sock;
 }
 
-int cppServer::socketConnection::getConn(){
+int cppServer::createSocket::getConn(){
     return conn;
 }
 
-struct sockaddr_in cppServer::socketConnection::getAddress(){
+struct sockaddr_in cppServer::createSocket::getAddress(){
     return address;
 }
 
-void cppServer::socketConnection::setConn(int connection){
+void cppServer::createSocket::setConn(int connection){
     conn = connection;
 }

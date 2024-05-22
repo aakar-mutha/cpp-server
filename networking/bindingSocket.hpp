@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "socketConnection.hpp"
+#include "createSocket.hpp"
 namespace cppServer {
-    class bindingSocket : public socketConnection {
+    class bindingSocket : public createSocket {
 
         public:
             bindingSocket(int domain, int service, int protocol, int port, u_long interface);

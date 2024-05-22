@@ -1,6 +1,6 @@
 #include "connectingSocket.hpp";
 
-cppServer::connectingSocket::connectingSocket(int domain, int service, int protocol, int port, u_long interface) : socketConnection(domain, service, protocol, port, interface) {
+cppServer::connectingSocket::connectingSocket(int domain, int service, int protocol, int port, u_long interface) : createSocket(domain, service, protocol, port, interface) {
     setConn(establishConnection(getSock(), getAddress()));
     testConnection(getConn());
 }

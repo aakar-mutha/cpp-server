@@ -1,6 +1,6 @@
 #include "bindingSocket.hpp"
 
-cppServer::bindingSocket::bindingSocket(int domain, int service, int protocol, int port, u_long interface) : socketConnection(domain, service, protocol, port, interface) {
+cppServer::bindingSocket::bindingSocket(int domain, int service, int protocol, int port, u_long interface) : createSocket(domain, service, protocol, port, interface) {
     setConn(establishConnection(getSock(), getAddress()));
     testConnection(getConn());
 }

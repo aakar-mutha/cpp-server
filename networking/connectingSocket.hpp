@@ -1,10 +1,10 @@
 
 #include <stdio.h>
-#include "socketConnection.hpp"
+#include "createSocket.hpp"
 
 
 namespace cppServer{
-    class connectingSocket: public socketConnection {
+    class connectingSocket: public createSocket {
         public:
             // Constructor 
             connectingSocket(int domain, int service, int protocol, int port, u_long interface);

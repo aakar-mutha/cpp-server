@@ -1,7 +1,7 @@
 /*
 Created By : Aakar Mutha 
 Date: 05/21/2024
-File: socketConnection.hpp
+File: createSocket.cpp
 */
 
 #include <stdio.h>
@@ -11,13 +11,13 @@ File: socketConnection.hpp
 
 namespace cppServer {
 
-    class socketConnection{
+    class createSocket{
         private:
             int sock;
             struct sockaddr_in address;
             int conn;
         public:
-            socketConnection(int domain, int service, int protocol, int port, u_long interface);
+            createSocket(int domain, int service, int protocol, int port, u_long interface);
 
             virtual int establishConnection(int sock, struct sockaddr_in address) = 0;
             
