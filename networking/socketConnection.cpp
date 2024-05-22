@@ -5,7 +5,7 @@ File: socketConnection.cpp
 */
 #include "socketConnection.hpp"
 
-cppServer::socketConnection::socketConnection(int domain, int service, int protocol, int port, unsigned long interface){
+cppServer::socketConnection::socketConnection(int domain, int service, int protocol, int port, u_long interface){
     /*
     DOMAIN: AF_INET (IP), AF_INET6 (IPv6), AF_UNIX (local channel, similar to pipes), AF_ISO (ISO protocols), and AF_NS (Xerox Network Systems protocols)
     SERVICE: SOCK_STREAM (virtual circuit service), SOCK_DGRAM (datagram service), SOCK_RAW (direct IP service)
@@ -48,3 +48,6 @@ struct sockaddr_in cppServer::socketConnection::getAddress(){
     return address;
 }
 
+void cppServer::socketConnection::setConn(int connection){
+    conn = connection;
+}

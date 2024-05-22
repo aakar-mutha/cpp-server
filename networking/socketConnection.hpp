@@ -17,7 +17,7 @@ namespace cppServer {
             struct sockaddr_in address;
             int conn;
         public:
-            socketConnection(int domain, int service, int protocol, int port, unsigned long interface);
+            socketConnection(int domain, int service, int protocol, int port, u_long interface);
 
             virtual int establishConnection(int sock, struct sockaddr_in address) = 0;
             
@@ -30,5 +30,9 @@ namespace cppServer {
             int getConn();
 
             struct sockaddr_in getAddress();
+
+            /* Setter Function */
+            void setConn(int connection);
+            
     };
 }
