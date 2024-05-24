@@ -19,7 +19,7 @@ namespace cppServer {
         public:
             createSocket(int domain, int service, int protocol, int port, u_long interface);
 
-            virtual int establishConnection(int sock, struct sockaddr_in address) = 0;
+            virtual void establishConnection(int sock, struct sockaddr_in address) = 0;
             
             /* Test if the connection was successful. */
             void testConnection(int testFD);
@@ -27,12 +27,12 @@ namespace cppServer {
             /* Getter Functions */
             int getSock();
 
-            int getConn();
+            // int getConn();
 
             struct sockaddr_in getAddress();
 
             /* Setter Function */
-            void setConn(int connection);
+            // void setConn(int connection);
             
     };
 }

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "createSocket.hpp"
+#include "createSocket.h"
 namespace cppServer {
     class bindingSocket : public createSocket {
 
@@ -7,7 +7,5 @@ namespace cppServer {
             bindingSocket(int domain, int service, int protocol, int port, u_long interface);
 
             int establishConnection(int sock, struct sockaddr_in address);
-
-            // bindingSocket(int domain, int service, int protocol, int port, u_long);
     };
 }

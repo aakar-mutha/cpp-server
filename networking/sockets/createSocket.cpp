@@ -3,7 +3,7 @@ Created By : Aakar Mutha
 Date: 05/21/2024
 File: createSocket.cpp
 */
-#include "createSocket.hpp"
+#include "createSocket.h"
 
 cppServer::createSocket::createSocket(int domain, int service, int protocol, int port, u_long interface){
     /*
@@ -20,17 +20,18 @@ cppServer::createSocket::createSocket(int domain, int service, int protocol, int
     // Create and test Socket.
     sock = socket(domain, service, protocol);
     testConnection(sock);
+    
 
     // conn is either bind or connect.
-    conn = establishConnection(sock, address);
-    testConnection(conn);
+    // conn = establishConnection(sock, address);
+    // testConnection(conn);
 
 }
 
 /* Test if the connection was successful. */
 void cppServer::createSocket::testConnection(int testFD) {
     if( testFD < 0){
-        perror("Connection Failed.....");
+        perror("Connection Failed.....\n");
         exit(EXIT_FAILURE);
     }
 }
@@ -40,14 +41,14 @@ int cppServer::createSocket::getSock(){
     return sock;
 }
 
-int cppServer::createSocket::getConn(){
-    return conn;
-}
+// int cppServer::createSocket::getConn(){
+//     return conn;
+// }
 
 struct sockaddr_in cppServer::createSocket::getAddress(){
     return address;
 }
 
-void cppServer::createSocket::setConn(int connection){
-    conn = connection;
-}
+// void cppServer::createSocket::setConn(int connection){
+//     conn = connection;
+// }
