@@ -7,12 +7,12 @@ CC = g++
 CFLAGS  = -g -Wall
 
 # The source files
-SRCS = ./networking/server/testServer.cpp \
-       ./networking/server/test.cpp \
-       ./networking/server/createServer.cpp \
-       ./networking/sockets/createSocket.cpp \
+SRCS = ./networking/sockets/createSocket.cpp \
        ./networking/sockets/bindingSocket.cpp \
-       ./networking/sockets/listeningSocket.cpp
+       ./networking/sockets/listeningSocket.cpp \
+	   ./networking/server/createServer.cpp \
+	   ./networking/server/testServer.cpp \
+       ./networking/server/test.cpp 
 
 # The object files
 OBJS = $(SRCS:.cpp=.o)
