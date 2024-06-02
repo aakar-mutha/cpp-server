@@ -6,5 +6,6 @@
 #define CPPSERVERLIB_NETWORKING_H
 
 #include "sockets/cppServerLib-sockets.h"
+#include "server/createServer.h"
 
 #endif //CPPSERVERLIB_NETWORKING_H

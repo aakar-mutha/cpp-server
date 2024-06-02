@@ -11,14 +11,14 @@ SRCS = ./networking/sockets/createSocket.cpp \
        ./networking/sockets/bindingSocket.cpp \
        ./networking/sockets/listeningSocket.cpp \
 	   ./networking/server/createServer.cpp \
-	   ./networking/server/testServer.cpp \
-       ./networking/server/test.cpp 
+	   ./server.cpp \
+	   ./startServer.cpp
 
 # The object files
 OBJS = $(SRCS:.cpp=.o)
 
 # The build target 
-TARGET = server
+TARGET = serve
 
 all: $(TARGET)
 
