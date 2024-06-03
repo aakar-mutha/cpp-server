@@ -20,12 +20,6 @@ cppServer::createSocket::createSocket(int domain, int service, int protocol, int
     // Create and test Socket.
     sock = socket(domain, service, protocol);
     testConnection(sock);
-    
-
-    // conn is either bind or connect.
-    // conn = establishConnection(sock, address);
-    // testConnection(conn);
-
 }
 
 /* Test if the connection was successful. */
@@ -41,14 +35,6 @@ int cppServer::createSocket::getSock(){
     return sock;
 }
 
-// int cppServer::createSocket::getConn(){
-//     return conn;
-// }
-
 struct sockaddr_in cppServer::createSocket::getAddress(){
     return address;
 }
-
-// void cppServer::createSocket::setConn(int connection){
-//     conn = connection;
-// }

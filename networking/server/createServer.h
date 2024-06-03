@@ -17,6 +17,7 @@ namespace cppServer{
 
         public:
             createServer(int domain, int service, int protocol, int port, u_long interface, int bklg);
+            ~createServer();
             virtual void acceptRequest() = 0;
             virtual void handleRequest() = 0; 
             virtual void respondToRrequest() = 0;

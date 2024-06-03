@@ -6,9 +6,6 @@
 #define CPPSERVERLIB_SOCKETS_H
 
 #include <stdio.h>
-// #include "createSocket.h"
-// #include "bindingSocket.h"
-// #include "connectingSocket.h"
 #include "listeningSocket.h"
 
 #endif //CPPSERVERLIB_SOCKETS_H
