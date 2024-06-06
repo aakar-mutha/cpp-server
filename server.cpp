@@ -20,11 +20,9 @@ void cppServer::server::acceptRequest()
 
 void cppServer::server::handleRequest()
 {
-    // cout << buffer << endl;   
     std::istringstream requestStream(buffer);
 
     // Create an HTTPServerRequestImpl object
-    Poco::Net::HTTPRequest request;
 
     try
     {
@@ -44,12 +42,44 @@ void cppServer::server::handleRequest()
     std::cout << "User-Agent: " << request.get("User-Agent") << std::endl;
     std::cout << "Content-Length: " << request.getContentLength() << std::endl;
 
+    if (request.getMethod() == Poco::Net::HTTPRequest::HTTP_GET)
+    {
+        std::string path = "";
+        path.append(request.getURI());
+        response = cppServer::get::handle(path, contents);
+    }
 }
 
 void cppServer::server::respondToRrequest()
 {
-    char *hello = "<p>Hello from the server</p>";
-    write(newSocket, hello, strlen(hello));
+    // if (status == EXIT_SUCCESS)
+    // {
+    //     std::string toWrite = "HTTP/1.1 " + std::to_string(Poco::Net::HTTPResponse::HTTP_OK) + "\n";
+    //     toWrite += "Content-Type: text/html\n";
+    //     toWrite += "Content-Length: " + std::to_string(strlen(contents)) + "\n\n";
+    //     toWrite.append(contents);
+    //     cout << endl
+    //          << toWrite << endl;
+
+    //     write(newSocket, toWrite.c_str(), toWrite.size());
+    // }
+    // else
+    // {
+        
+    //     std::string toWrite = "HTTP/1.1 " + std::to_string(Poco::Net::HTTPResponse::HTTP_NOT_FOUND) + "\n";
+    //     toWrite += "Content-Type: text/html\n";
+    //     toWrite += "Content-Length: " + std::to_string(strlen(msg)) + "\n\n";
+    //     toWrite.append(msg);
+    //     write(newSocket, &toWrite, toWrite.size());
+    //     cout << endl
+    //          << toWrite << endl;
+    //     // session.receiveResponse(response);
+
+    //     write(newSocket, toWrite.c_str(), toWrite.size());
+    // }
+
+    // write(newSocket, hello, strlen(hello));
+    write(newSocket, response.c_str(), response.size());
     close(newSocket);
 }
 

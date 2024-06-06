@@ -8,4 +8,6 @@
 #include "sockets/cppServerLib-sockets.h"
 #include "server/createServer.h"
 
+#include "requests/get.h"
+
 #endif //CPPSERVERLIB_NETWORKING_H

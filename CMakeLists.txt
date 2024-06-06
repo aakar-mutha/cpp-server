@@ -19,6 +19,7 @@ set(SRCS
     ./networking/sockets/bindingSocket.cpp
     ./networking/sockets/listeningSocket.cpp
     ./networking/server/createServer.cpp
+    ./networking/requests/get.cpp
     ./server.cpp
     ./startServer.cpp
 )

@@ -1,0 +1,1 @@
+#define BASE_PATH "/mnt/data/NYU Notes/PROJECTS/CPP Server/public";

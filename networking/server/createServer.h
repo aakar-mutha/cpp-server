@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+#include <Poco/Net/HTTPResponse.h>
 #include "../cppServerLib-networking.h"
 
 namespace cppServer{
@@ -17,7 +18,7 @@ namespace cppServer{
 
         public:
             createServer(int domain, int service, int protocol, int port, u_long interface, int bklg);
-            ~createServer();
+            // ~createServer();
             virtual void acceptRequest() = 0;
             virtual void handleRequest() = 0; 
             virtual void respondToRrequest() = 0;
