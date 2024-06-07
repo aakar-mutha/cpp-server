@@ -1,1 +1,2 @@
-#define BASE_PATH "/mnt/data/NYU Notes/PROJECTS/CPP Server/public";
+#define BASE_PATH "../public"
+#define PORT 8080

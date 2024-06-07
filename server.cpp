@@ -4,7 +4,7 @@
 
 #include "server.h"
 
-cppServer::server::server() : createServer(AF_INET, SOCK_STREAM, 0, 3000, INADDR_ANY, 10)
+cppServer::server::server() : createServer(AF_INET, SOCK_STREAM, 0, PORT, INADDR_ANY, 10)
 {
     launch();
 }
@@ -52,33 +52,7 @@ void cppServer::server::handleRequest()
 
 void cppServer::server::respondToRrequest()
 {
-    // if (status == EXIT_SUCCESS)
-    // {
-    //     std::string toWrite = "HTTP/1.1 " + std::to_string(Poco::Net::HTTPResponse::HTTP_OK) + "\n";
-    //     toWrite += "Content-Type: text/html\n";
-    //     toWrite += "Content-Length: " + std::to_string(strlen(contents)) + "\n\n";
-    //     toWrite.append(contents);
-    //     cout << endl
-    //          << toWrite << endl;
 
-    //     write(newSocket, toWrite.c_str(), toWrite.size());
-    // }
-    // else
-    // {
-        
-    //     std::string toWrite = "HTTP/1.1 " + std::to_string(Poco::Net::HTTPResponse::HTTP_NOT_FOUND) + "\n";
-    //     toWrite += "Content-Type: text/html\n";
-    //     toWrite += "Content-Length: " + std::to_string(strlen(msg)) + "\n\n";
-    //     toWrite.append(msg);
-    //     write(newSocket, &toWrite, toWrite.size());
-    //     cout << endl
-    //          << toWrite << endl;
-    //     // session.receiveResponse(response);
-
-    //     write(newSocket, toWrite.c_str(), toWrite.size());
-    // }
-
-    // write(newSocket, hello, strlen(hello));
     write(newSocket, response.c_str(), response.size());
     close(newSocket);
 }

@@ -10,6 +10,9 @@
    <link href="https://fonts.googleapis.com/css?family=Miriam Libre" rel="stylesheet">
    <link rel="stylesheet" href="./css/style.css">
    <link rel="stylesheet" href="./css/menu.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <script src='https://kit.fontawesome.com/cc5858abf9.js' crossorigin="anonymous"></script>
    <title>Aakar Mutha | Developer | Dreamer</title>
@@ -29,16 +32,13 @@
                <div>
                   <div>
                      <ul>
-                        <li><a href="/Aakar Mutha.pdf" target="_blank" onclick="resume()">Resume</a></li>
+                        <li><a href="/AAKAR_MUTHA_RESUME.pdf" target="_blank" onclick="resume()">Resume</a></li>
                         <li><a onclick="gosec('intro')">About</a></li>
                         <li><a onclick="gosec('edu')">Education</a></li>
+                        <li><a onclick="gosec('skills')">Skills</a></li>
+                        <li><a onclick="gosec('work')">Work Experience</a></li>
                         <li><a onclick="gosec('projects')">Projects</a></li>
-                        <li><a onclick="gosec('award')">Achievements</a></li>
-                        <li><a onclick="gosec('exp')">Extra Carricular</a></li>
-                        <li><a onclick="gosec('skill')">Skills</a></li>
-                        <li><a onclick="gosec('inter')">Interests</a></li>
-                        
-                        
+                        <li><a onclick="gosec('leadership')">Leadership Experience</a></li>
                      </ul>
                   </div>
                </div>
@@ -53,13 +53,15 @@
                   <div style="letter-spacing:0.8vw; padding-bottom: 0px;">MUTHA</div>
                </span>
             </div>
-            
+
             <div class="VIT">
-               <span style="color: #66fcf1;">VIT, Vellore</span>
+               <span style="color: #66fcf1;">Bringing ideas to reality!</span>
             </div>
             <div class="about">
                <p>
-                  Hi! i am Aakar, a student at Vellore Institue of Technology, Vellore who loves learning new things everyday. I am currently in the third year studying Electronics and Commmunication Engineering. I am experienced in developing ML models, Flask applications, their deployment. I want to use my skills for the betterment of the society.
+                  Hi! i am Aakar, a student at New York University, New York who loves learning and building new things
+                  everyday. I'm a passionate Full Stack developer building applications with Python, PHP, NodeJS or
+                  whatever you want it in. Also the server for this website is written in C++.
                </p>
             </div>
             <div class="social-menu">
@@ -71,8 +73,10 @@
                            aria-hidden="true"></i></a></li>
                   <li><a href="https://www.instagram.com/iamaakar/" target="_blank"><i class="fab fa-instagram"
                            aria-hidden="true"></i></a></li>
-                  <li><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=aakar.mutha18@gmail.com"
-                        target="_blank"><i class="far fa-envelope" aria-hidden="true"></i></a></li>
+                  <li><a href="mailto:aakar.mutha+website@nyu.edu" target="_blank"><i class="far fa-envelope"
+                           aria-hidden="true"></i></a></li>
+                  <li><a href="/AAKAR_MUTHA_RESUME.pdf" target="_blank"><i class="far fa-file"
+                           aria-hidden="true"></i></a></li>
                </ul>
                </p>
             </div>
@@ -82,129 +86,171 @@
    <hr class="edu">
    <div class="education container">
       <span class="item"><b>Education</b></span>
+      <br>
+      <p class="type">NEW YORK UNIVERSITY, NEW YORK, UNITED STATES</p>
+      <p class="contents">
+      <p class="period"> 2023 - Present</p>
+      <p class="contents">
+         Masters of Science in Computer Science.
+      </p>
+      <br>
+      <p>
+      <h2 class="grades" style="max-width:20%">GPA : 3.85</h2>
+      </p>
+
+      <br>
       <p class="type">VELLORE INSTITUTE OF TECHNOLOGY , VELLORE</p>
       <p class="contents">
-      <p class="period"> 2018 - Present</p>
+      <p class="period"> 2018 - 2022</p>
       <p class="contents">
-         Bachlors Degree in Electronics and Communication Engineering with Specilization
+         Bachlors of Technology in Electronics and Communication Engineering with Specilization
          in Internet of Things and Sensors.
       </p>
-      <h2 class="grades">CGPA : 9.03</h2>
+      <h2 class="grades">CGPA : 9.12</h2>
       <br>
-      <p class="type">LATE P . JOG JUNIOR COLLEGE</p>
-      <p class="period"> 2018 - Passout</p>
-      <p class="contents">
-         Higher Secondary Certifiacte in Physics , Chemistry & Maths
-      </p>
-      <p class="grades">SECURED : 86.5%
-      <p>
    </div>
+
+   <hr class="skills">
+   <div class="skills container">
+      <span class="item"><b>Skills</b></span>
+      <p class="type">PROGRAMMING LANGUAGES </p>
+      <ul class="skills-list">
+         <li>Python</li>
+         <li>PHP</li>
+         <li>C</li>
+         <li>C++</li>
+         <li>HTML</li>
+         <li>CSS</li>
+         <li>SQL</li>
+         <li>JavaScript</li>
+         <li>Typescript</li>
+         <li>Shell Scripting</li>
+         <li>Java</li>
+      </ul>
+
+      <p class="type">FRAMEWORKS </p>
+      <ul class="skills-list">
+         <li>Linux</li>
+         <li>Docker</li>
+         <li>Kubernetes</li>
+         <li>AWS</li>
+         <li>GCP</li>
+         <li>CI/CD</li>
+         <li>MongoDB</li>
+         <li>MYSQL</li>
+         <li>Flask</li>
+         <li>NodeJS</li>
+         <li>NextJS</li>
+         <li>Firebase</li>
+         <li>Git</li>
+      </ul>
+
+      <p class="type">PACKAGES </p>
+      <ul class="skills-list">
+         <li>Magento</li>
+         <li>Laravel</li>
+         <li>Bootstrap</li>
+         <li>Agile</li>
+         <li>SonarQube</li>
+         <li>Jenkins</li>
+         <li>Pytest</li>
+         <li>Numpy</li>
+         <li>Pandas</li>
+         <li>OpenCV</li>
+         <li>Hadoop</li>
+         <li>Pyspark</li>
+         <li>Pytorch</li>
+         <li>Keras</li>
+         <li>Tensorflow</li>
+      </ul>
+   </div>
+
+   <hr class="work">
+   <div class="experience container">
+      <span class="item"><b>Work Experience</b></span>
+      <p class="type">Bajaj Finserv, SDE - I</p>
+      <span class="period">July 2022 - July 2023</span>
+      <ul class="exp-list">
+         <li>Reengineered and upgraded critical ecommerce services into a scalable microservices enabling 40% faster API
+            response time.</li>
+         <li>Troubleshot and optimized notification services based on business requirements resulting in a remarkable
+            cost reduction of 60%.</li>
+         <li>Containerized multiple applications and facilitated migration to Kubernetes resulting in a 40% reduction in
+            downtime.</li>
+         <li>Built the backend of a flagship product from conception to completion by collaborating with
+            cross-disciplinary individuals.</li>
+         <li>Transformed specifications through the implementation of agile methodologies into tangible deliverables to
+            business teams and stakeholders.</li>
+      </ul>
+      
+      <p class="type">Bajaj Finserv, SDE Intern</p>
+      <span class="period">January 2022 - June 2022</span>
+      <ul class="exp-list">
+         <li>Built individualized event management system dashboards utilizing the LAMP stack for various users and administrators to utilize from the beginning to end of their event planning process.</li>
+         <li>Troubleshot and optimized notification services based on business requirements resulting in a remarkable
+            cost reduction of 60%.</li>
+         <li>Developed an ecommerce application with the MEAN stack and oversaw the end-to-end process.</li>
+         <li>Generated reports and documents related to project specifications, status and activities, reviewed by major stakeholders.</li>
+      </ul>
+   </div>
+
    <hr class="projects">
    <div class="experience container">
       <span class="item"><b>Projects</b></span>
-      <p class="type">Asset Tracking and Alert</p>
+      <p class="type">C++ HTTP Server</p>
+      <p class="keywords">C++ | Networking | Socket Programming | POCO Library</p>
       <p class="contents">
-      <p class="period"> 2021</p>
-      <p class="contents">
-         In this project we made a GPS, GSM and RFID enabled smart shoe which will track the postion of the user and
-         enable disrete alerting in difficult situations.
+         Developed a lightweight C++ HTTP server from scratch using socket programming. Implemented functionalities to
+         handle GET requests, parse HTTP headers, and send responses based on requested resources. The server that this
+         website is currently using.
       </p>
-      <p class="type">WHO Suicide Dataset EDA and Prediction</p>
+
+
+      <p class="type">Disk I/O Performance Analysis And Optimization</p>
+      <p class="keywords">C | C++ | Multithreading | System Calls</p>
       <p class="contents">
-      <p class="period">2020</p>
-      <p class="contents">
-         EDA on the WHO Suicide Dataset and Comparion of performance of different regression algorithms on it.
+         Spearheaded A Multifaceted Project Aimed At Optimizing Disk Input/Output (I/O) Performance, Achieving An
+         Outstanding Maximum Read Speed Of Over 32,000 MiB/S For A 2GB File, While Leveraging C/C++ Programming To
+         Meticulously Assess Cache Effects, System Call Costs, And The Impact Of Diverse Block Sizes, Resulting In
+         Substantial Throughput Improvements And Eﬀiciency Gains.
       </p>
-      <p class="type">Person ReID system</p>
-      <p class="period">2020</p>
+
+      <p class="type">Serverless Recommendation Chatbot Using AWS</p>
+      <p class="keywords">API Gateway | LexV2 | Lambda | S3 | SQS | SES | EventBridge | DynamoDB | Opensearch | S3</p>
       <p class="contents">
-         Resnet50 based system to identify the same person in differnt photos.
+         Developed A Chatbot Using Lex And Lambda To Provide Restaurant Email Recommendations To Users Based On Their
+         Preferences Utilizing AWS Services Like DynamoDB To Store User Preferences And Amazon OpenSearch For Restaurant
+         Data Indexing, Amazon SES For Seamless Email Communication And Amazon S3 For Reliable Static Website Delivery.
       </p>
+
+      <p class="type">Person Re-Identification And Tracking</p>
+      <p class="keywords">Machine Learning | Python | ResNet-50 | YOLO-V5 | COCO | MARKET1501</p>
+      <p class="contents">
+         Implemented The ResNet-50 Algorithm Pre-Trained On The MARKET501 Dataset To Detect The Same Person In The
+         Different Parts Of A Video Using YOLO-V5 To First Make A Custom Dataset In Real Time With 75% Precision
+      </p>
+
+
    </div>
-   <hr class="award">
-   <div class="awards container">
-      <span class="awa"><b>Achievements</b></span>
-      <div class="other-skills">
-         <ul>
-            <li><i class="fas fa-trophy"></i>Udacity Machine Learning Engineer Nanodegree</li>
-            <li></li>
-            <li><i class="fas fa-trophy"></i>30 Days of GCP (Cloud and ML tracks)</li>
-            <li></li>
-            <li><i class="fas fa-trophy"></i>GAIT Japan Bronze Certifiaction - Top 150 in India</li>
-            <li></li>
-            <li><i class="fas fa-trophy"></i>Special Mention DEVSOC'19</li>
-         </ul>
-      </div>
-   </div>
-   <hr class="exp">
+
+   <hr class="leadership">
    <div class="experience container">
-      <span class="item"><b>Extra Carricular</b></span>
-      <p class="type">EVENTS HEAD, IOTHINC , VIT</p>
+      <span class="item"><b>Leadership Experience</b></span>
+      <p class="type">Events Head, IoT Community Club</p>
+      <span class="period"> January 2021 - December 2021</span>
       <p class="contents">
-      <aside class="period"> 2020 - 2021</aside>
-      <p class="contents">
-         A student club for IoT as well as upcoming technology enthusiasts.
+         <ul class="exp-list">
+            <li>Led a team of 50 members to organize and execute various events and workshops related to IoT and other supporting technologies such as UI/UX design, Machine Learning, etc.</li>
+            <li>Collaborated with other student clubs and organizations to co-host events and workshops, resulting in a wider reach and more
+               diverse set of events. Spearheaded the planning and ideation of conducting a hackathon as the flagship event.</li>
+         </ul>
       </p>
-      <p class="type">CORE COMMITTE MEMBER, IOTHINC , VIT</p>
-      <p class="contents">
-         <!-- <p class="period"> 2018 - 2020</p> -->
-      <aside class="period">2018 - 2020</aside>
-      <p class="contents">
-         A student club for IoT as well as upcoming technology enthusiasts.
-      </p>
-      <p class="type">SENIOR CORE COMMITTE MEMBER , IEEE - PCS , VIT</p>
-      <aside class="period">2018 - 2020</aside>
-      <p class="contents">
-         A student chapter related to effective communication.
-      </p>
+
    </div>
 
-   <hr class="skill">
-   <div class="skills container">
-      <span class="item"><b>Skills</b></span>
-      <p class="type">PROGRAMMING LANGUAGES AND TOOLS</p>
-      <div class="logos">
-         <ul>
-            <li><i class="fab fa-python" aria-hidden="true"></i></li>
-            <li><i class="fab fa-git" aria-hidden="true"></i></li>
-            <li><i class="fab fa-html5" aria-hidden="true"></i></li>
-            <li><i class="fab fa-css3-alt" aria-hidden="true"></i></li>
-            <li><i class="fab fa-android" aria-hidden="true"></i></li>
-         </ul>
-      </div>
-      <p class="type">OTHER SKILLS INCLUDE </p>
-      <div class="other-skills">
-         <ul>
-            <li>Python</li>
-            <li>Jupyter Notebook</li>
-            <li>Machine Learning</li>
-            <li>Flask</li>
-            <li>Firebase</li>
-            <li>AWS Sagemaker</li>
-            <li>Tensorflow</li>
-            <li>Image Processing</li>
-            <li>Basic GCP</li>
-            <li>LabView</li>
-            <li>Multisim</li>
-            <li>C++</li>
-
-         </ul>
-      </div>
-   </div>
-   <hr class="inter">
-   <div class="interests container">
-      <span class="item"><b>Interests</b></span>
-      <p class="contents">
-         <div class="other-skills">
-            <ul>
-               <li>Photography</li>
-               <li>Music</li>
-               <li>Swimming</li>
-               
-            </ul>
-         </div>
-      </p>
-   </div>   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
    <script src="./js/script.js"></script>
 </body>
 
